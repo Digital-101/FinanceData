@@ -21,6 +21,7 @@ model_fit = model.fit()
 forecast_steps = 20
 forecast_results = model_fit.get_forecast(steps=forecast_steps)
 forecast = forecast_results.predicted_mean
+#Confidence Intervals
 conf_int = forecast_results.conf_int(alpha=0.05)  # 95% CI
 
 # Prepare future dates for the forecast
